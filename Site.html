@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Consulting — Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Strona główna">
+        <span class="brand__logoWrap">
+          <img class="brand__logo" src="Images/Logo.png" alt="Q100SZ Spółka z o.o." />
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Główne menu">
+        <a href="#oferta">oferta</a>
+        <a href="#o-firmie">o firmie</a>
+        <a href="#klienci">klienci</a>
+        <a href="#informacje">informacje</a>
+        <a href="#zespol">zespół</a>
+        <a href="#partnerzy">partnerzy</a>
+        <a class="nav__cta" href="#kontakt">kontakt</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="kicker">DORADZTWO / PROJEKTOWANIE</p>
+          <h1>Doradztwo i projektowanie dla Twoich inwestycji</h1>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#oferta">Poznaj ofertę</a>
+            <a class="btn btn--ghost" href="#kontakt">Napisz do nas</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__num">10+</div>
+              <div class="stat__label">lat doświadczenia</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">300+</div>
+              <div class="stat__label">projektów</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">PL</div>
+              <div class="stat__label">zasięg ogólnopolski</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="glass-card">
+            <div class="glass-card__row">
+              <div class="pill">Planowanie</div>
+              <div class="pill">Analizy</div>
+              <div class="pill">OZE</div>
+            </div>
+            <div class="glass-card__map"></div>
+            <div class="glass-card__footer">
+              <span class="dot"></span>
+              <span>Lorem ipsum • Dolor sit • Amet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__fade"></div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="section" id="oferta">
+      <div class="container">
+        <div class="section__head">
+          <h2>Nasza oferta</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="card__icon">⟡</div>
+            <h3>Doradztwo w zakresie planowania przestrzennego</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">⟡</div>
+            <h3>Studia uwarunkowań i kierunków zagospodarowania</h3>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">⟡</div>
+            <h3>Miejscowe plany zagospodarowania przestrzennego</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">⟡</div>
+            <h3>Wsparcie branży OZE</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">⟡</div>
+            <h3>Decyzje o warunkach zabudowy</h3>
+            <p>Excepteur sint occaecat cupidatat non proident.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">⟡</div>
+            <h3>Koncepcje i analizy przestrzenne</h3>
+            <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- O FIRMIE -->
+    <section class="section section--alt" id="o-firmie">
+      <div class="container split">
+        <div>
+          <h2>O firmie</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+          </p>
+
+          <div class="bullets">
+            <div class="bullet">
+              <span class="bullet__dot"></span>
+              <span>Lorem ipsum dolor sit amet, consectetur.</span>
+            </div>
+            <div class="bullet">
+              <span class="bullet__dot"></span>
+              <span>Sed do eiusmod tempor incididunt ut labore.</span>
+            </div>
+            <div class="bullet">
+              <span class="bullet__dot"></span>
+              <span>Ut enim ad minim veniam, quis nostrud.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="photo">
+          <div class="photo__frame">
+            <div class="photo__placeholder">
+              <div class="photo__lines"></div>
+              <div class="photo__label">zdjęcie / wizualizacja</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KLIENCI -->
+    <section class="section" id="klienci">
+      <div class="container">
+        <div class="section__head">
+          <h2>Klienci</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+        </div>
+
+        <div class="logos">
+          <div class="logo">Klient A</div><div class="logo">Klient B</div><div class="logo">Klient C</div><div class="logo">Klient D</div>
+          <div class="logo">Klient E</div><div class="logo">Klient F</div><div class="logo">Klient G</div><div class="logo">Klient H</div>
+          <div class="logo">Klient I</div><div class="logo">Klient J</div><div class="logo">Klient K</div><div class="logo">Klient L</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMACJE (mini blog / aktualności) -->
+    <section class="section section--alt" id="informacje">
+      <div class="container">
+        <div class="section__head">
+          <h2>Informacje</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+        </div>
+
+        <div class="grid posts">
+          <article class="post">
+            <div class="post__meta">22.10.2025 • Aktualność</div>
+            <h3>Lorem ipsum dolor sit amet</h3>
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <a class="post__link" href="#kontakt">Czytaj więcej →</a>
+          </article>
+
+          <article class="post">
+            <div class="post__meta">21.10.2024 • Rekrutacja</div>
+            <h3>Consectetur adipiscing elit</h3>
+            <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.</p>
+            <a class="post__link" href="#kontakt">Czytaj więcej →</a>
+          </article>
+
+          <article class="post">
+            <div class="post__meta">12.08.2024 • Współpraca</div>
+            <h3>Sed do eiusmod tempor</h3>
+            <p>Cras mattis consectetur purus sit amet fermentum.</p>
+            <a class="post__link" href="#kontakt">Czytaj więcej →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZESPÓŁ -->
+    <section class="section" id="zespol">
+      <div class="container">
+        <div class="section__head">
+          <h2>Zespół</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+
+        <div class="grid team">
+          <article class="person">
+            <div class="avatar" aria-hidden="true"><span>P1</span></div>
+            <div>
+              <h3>Pracownik 1</h3>
+              <p class="muted">Stanowisko / rola</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </article>
+
+          <article class="person">
+            <div class="avatar" aria-hidden="true"><span>P2</span></div>
+            <div>
+              <h3>Pracownik 2</h3>
+              <p class="muted">Stanowisko / rola</p>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            </div>
+          </article>
+
+          <article class="person">
+            <div class="avatar" aria-hidden="true"><span>P3</span></div>
+            <div>
+              <h3>Pracownik 3</h3>
+              <p class="muted">Stanowisko / rola</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERZY -->
+    <section class="section section--alt" id="partnerzy">
+      <div class="container">
+        <div class="section__head">
+          <h2>Partnerzy</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit.</p>
+        </div>
+
+        <div class="logos logos--tight">
+          <div class="logo">Partner 1</div><div class="logo">Partner 2</div><div class="logo">Partner 3</div><div class="logo">Partner 4</div>
+          <div class="logo">Partner 5</div><div class="logo">Partner 6</div><div class="logo">Partner 7</div><div class="logo">Partner 8</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT / FORMULARZ -->
+    <section class="section contact" id="kontakt">
+      <div class="container split">
+        <div>
+          <h2>Kontakt</h2>
+          <p class="lead">Napisz do nas — odpowiemy najszybciej jak to możliwe.</p>
+          <p class="muted">
+            Formularz wyśle wiadomość na: <strong>miloszk2004@gmail.com</strong>
+          </p>
+
+          <div class="contact__card">
+            <div class="contact__line"><span class="dot"></span><span>Lorem ipsum, ul. Przykładowa 1</span></div>
+            <div class="contact__line"><span class="dot"></span><span>00-000 Lorem, Polska</span></div>
+            <div class="contact__line"><span class="dot"></span><span>+48 000 000 000</span></div>
+          </div>
+
+          <p class="muted small">
+            Jeśli SMTP nie jest skonfigurowany, zawsze możesz użyć:
+            <a class="inline-link" href="mailto:miloszk2004@gmail.com?subject=Wiadomo%C5%9B%C4%87%20ze%20strony&body=Cze%C5%9B%C4%87!">mailto:</a>
+          </p>
+        </div>
+
+        <form class="form" id="contactForm">
+          <label>
+            Imię i nazwisko
+            <input name="name" type="text" placeholder="Jan Kowalski" required />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" placeholder="jan@firma.pl" required />
+          </label>
+
+          <label>
+            Temat
+            <input name="subject" type="text" placeholder="W czym możemy pomóc?" required />
+          </label>
+
+          <label>
+            Wiadomość
+            <textarea name="message" rows="6" placeholder="Napisz wiadomość..." required></textarea>
+          </label>
+
+          <button class="btn" type="submit" id="sendBtn">Wyślij wiadomość</button>
+          <div class="form__status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--footer">
+          <span class="brand__mark">UC</span>
+          <span class="brand__name">Urban Consulting</span>
+        </div>
+        <p class="muted small">© <span id="year"></span> Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="footer__right">
+        <a href="#top">Do góry ↑</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
