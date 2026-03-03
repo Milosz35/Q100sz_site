@@ -2,20 +2,56 @@ const $ = (sel) => document.querySelector(sel);
 
 const burger = $("#burger");
 const mobileNav = $("#mobileNav");
+const overlay = $("#navOverlay");
+
+function openNav() {
+  burger?.setAttribute("aria-expanded", "true");
+  mobileNav.hidden = false;
+  overlay && (overlay.hidden = false);
+
+  // wymuszamy “reflow”, żeby animacja zadziałała po zdjęciu hidden
+  mobileNav.offsetHeight;
+
+  mobileNav.classList.add("is-open");
+  overlay?.classList.add("is-open");
+}
+
+function closeNav() {
+  burger?.setAttribute("aria-expanded", "false");
+  mobileNav.classList.remove("is-open");
+  overlay?.classList.remove("is-open");
+
+  // po animacji dopiero chowamy
+  setTimeout(() => {
+    mobileNav.hidden = true;
+    if (overlay) overlay.hidden = true;
+  }, 220);
+}
 
 if (burger && mobileNav) {
   burger.addEventListener("click", () => {
     const expanded = burger.getAttribute("aria-expanded") === "true";
-    burger.setAttribute("aria-expanded", String(!expanded));
-    mobileNav.hidden = expanded;
+    expanded ? closeNav() : openNav();
   });
 
-  // zamknij menu po kliknięciu linku
   mobileNav.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      burger.setAttribute("aria-expanded", "false");
-      mobileNav.hidden = true;
-    });
+    a.addEventListener("click", closeNav);
+  });
+
+  overlay?.addEventListener("click", closeNav);
+
+  // ESC zamyka
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+      closeNav();
+    }
+  });
+
+  // jak ktoś powiększy okno na desktop, zamknij drawer
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980 && burger.getAttribute("aria-expanded") === "true") {
+      closeNav();
+    }
   });
 }
 

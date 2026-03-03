@@ -112,17 +112,69 @@ a:hover{opacity:.9}
 }
 
 .mobile-nav{
-  border-top:1px solid var(--line2);
-  padding:10px 20px 18px;
-  display:grid;
-  gap:8px;
-  color:var(--muted);
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  top: 78px;            
+  z-index: 40;
+
+  display: grid;
+  gap: 10px;
+
+  padding: 14px;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(11,15,20,.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 24px 70px rgba(0,0,0,.55);
+
+  transform: translateY(-14px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .22s ease, opacity .22s ease;
 }
+.mobile-nav.is-open{
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .mobile-nav a{
-  padding:10px 12px;
-  border:1px solid var(--line2);
-  border-radius:14px;
+  padding: 12px 12px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
   background: rgba(255,255,255,.03);
+  color: rgba(232,238,247,.88);
+}
+
+.nav-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .22s ease;
+}
+.nav-overlay.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* tylko na mobile pokazuj burger i drawer */
+@media (max-width: 980px){
+  .nav{display:none}
+  .burger{display:inline-block}
+}
+
+/* na desktop nie używaj drawer */
+@media (min-width: 981px){
+  .mobile-nav{display:none}
+  .nav-overlay{display:none}
 }
 
 /* HERO */
@@ -241,6 +293,7 @@ h1{
   width: 422.4px;
   border-radius: 18px;
   border:1px solid var(--line2);
+  color: rgba(207,227,255,.10);
   background:
     linear-gradient(135deg, rgba(207,227,255,.10), rgba(255,255,255,.02)),
     repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0, rgba(255,255,255,.06) 1px, transparent 1px, transparent 16px),
