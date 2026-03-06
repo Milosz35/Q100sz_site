@@ -9,7 +9,6 @@ function openNav() {
   mobileNav.hidden = false;
   overlay && (overlay.hidden = false);
 
-  // wymuszamy “reflow”, żeby animacja zadziałała po zdjęciu hidden
   mobileNav.offsetHeight;
 
   mobileNav.classList.add("is-open");
@@ -21,7 +20,6 @@ function closeNav() {
   mobileNav.classList.remove("is-open");
   overlay?.classList.remove("is-open");
 
-  // po animacji dopiero chowamy
   setTimeout(() => {
     mobileNav.hidden = true;
     if (overlay) overlay.hidden = true;
@@ -40,14 +38,12 @@ if (burger && mobileNav) {
 
   overlay?.addEventListener("click", closeNav);
 
-  // ESC zamyka
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
       closeNav();
     }
   });
 
-  // jak ktoś powiększy okno na desktop, zamknij drawer
   window.addEventListener("resize", () => {
     if (window.innerWidth > 980 && burger.getAttribute("aria-expanded") === "true") {
       closeNav();

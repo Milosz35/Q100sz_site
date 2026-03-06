@@ -6,7 +6,6 @@ export default async function handler(req, res) {
   try {
     const { name = "", email = "", message = "", company = "" } = req.body || {};
 
-    // honeypot: boty często uzupełniają ukryte pole
     if (company) return res.status(200).json({ ok: true });
 
     if (!message || String(message).trim().length < 3) {
